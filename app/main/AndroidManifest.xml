@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="179" android:versionName="6.97" android:compileSdkVersion="23" android:compileSdkVersionCodename="6.0-2438415" package="com.ustv.v2" platformBuildVersionCode="30" platformBuildVersionName="11">
+    <uses-sdk android:minSdkVersion="18" android:targetSdkVersion="23"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="com.ustv.v2.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.ustv.v2.permission.C2D_MESSAGE"/>
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:name="com.ustv.player.main.MainApplication" android:debuggable="true" android:allowBackup="true" android:largeHeap="true" android:supportsRtl="true" android:appComponentFactory="android.support.v4.app.CoreComponentFactory">
+        <activity android:theme="@style/AppTheme" android:name="com.ustv.player.p015ui.license_order_info.LicenseOrderActivity"/>
+        <activity android:theme="@style/FullscreenTheme" android:label="@string/app_name" android:name="com.ustv.player.p015ui.activity.MainActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="live"/>
+                <data android:scheme="rtmp"/>
+                <data android:scheme="rtmpe"/>
+                <data android:scheme="mmsh"/>
+                <data android:scheme="mmst"/>
+                <data android:scheme="mms"/>
+                <data android:scheme="wmrtsp"/>
+                <data android:scheme="rtsp"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ustv.player.p015ui.activity.LoginActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ustv.player.p015ui.activity.SignUpActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ustv.player.p015ui.activity.BuyProActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ustv.player.p015ui.activity.PurchaseActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ustv.player.p015ui.activity.SignInActivity"/>
+        <activity android:name="com.ustv.player.p015ui.activity.PlayerActivity" android:launchMode="singleTask" android:configChanges="locale|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/AppTheme" android:name="com.ustv.player.p015ui.activity.AboutActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ustv.player.p015ui.proinfo.ProInfoActivity"/>
+        <activity android:name="com.ustv.player.p015ui.activity.EndUserActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ustv.player.p015ui.activity.HelpActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ustv.player.p015ui.activity.CameraBaseActivity"/>
+        <activity android:name="com.ustv.player.p015ui.activity.RestoreActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ustv.player.p015ui.activity.SearchActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateVisible|adjustPan"/>
+        <activity android:name="com.ustv.player.p015ui.activity.CastPlayerActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ustv.player.p015ui.activity.PurchaseInDetailActivity" android:launchMode="singleTask" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.ustv.player.p015ui.activity.PurchaseInDetailActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="android.max_aspect" android:value="2.4"/>
+        <meta-data android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME" android:value="com.mdc.libchromecast.CastOptionsProvider"/>
+        <meta-data android:name="io.fabric.ApiKey" android:value="removed by YAT"/>
+        <provider android:name="android.support.p000v4.content.FileProvider" android:exported="false" android:authorities="com.ustv.player.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/image_path"/>
+        </provider>
+        <receiver android:name="com.ustv.player.receiver.AlarmReceiver"/>
+        <receiver android:name="com.ustv.player.receiver.BootReceiver" android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.ustv.player.service.PIPService"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@mipmap/ic_launcher"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/colorAccent"/>
+        <service android:name="com.lib.gcm.MyFirebaseMessagingService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.lib.gcm.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.wdhko.wktjp122971.APIKEY" android:value="android*1352111749122971349"/>
+        <meta-data android:name="com.wdhko.wktjp122971.APPID" android:value="153433"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.wdhko.wktjp122971.SmartWallActivity" android:configChanges="orientation|screenSize"/>
+        <activity android:theme="@style/Theme.Translucent" android:name="com.wdhko.wktjp122971.MainActivity" android:exported="false" android:configChanges="orientation|screenSize"/>
+        <activity android:name="com.wdhko.wktjp122971.BrowserActivity" android:configChanges="orientation|screenSize"/>
+        <activity android:theme="@style/Theme.NoTitleBar.Fullscreen" android:name="com.wdhko.wktjp122971.VDActivity" android:screenOrientation="landscape" android:configChanges="orientation|screenSize"/>
+        <meta-data android:name="applovin.sdk.key" android:value="9kLXPf2AQMVWQMkZFpsSfmbC1yu_aM3k5OGU2IfSf9-4VhdmUUD9EqMFmEFKbI2ggIAibqAF-8KUrzEJRRSfFq"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.ap.ApActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:theme="@style/Theme.AppCompat.NoActionBar" android:name="mdc.libgeneral.NotificationActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.AppCompat.NoActionBar" android:name="mdc.libgeneral.CategoryActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/FullscreenTheme" android:label="@string/title_activity_paypal_checkout" android:name="com.mdc.upgrade.PaypalCheckoutActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:theme="@style/FullScreenTheme" android:name="com.mdc.upgrade.MDCUpgradeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="ustvupgrade"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen" android:name="mdc.licensekeyupgrade.QRCodeActivity" android:screenOrientation="portrait"/>
+        <provider android:name="com.crashlytics.android.CrashlyticsInitProvider" android:exported="false" android:authorities="com.ustv.v2.crashlyticsinitprovider" android:initOrder="90"/>
+        <receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver" android:exported="false"/>
+        <service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService"/>
+        <service android:name="com.google.android.gms.cast.framework.ReconnectionService"/>
+        <meta-data android:name="android.support.VERSION" android:value="26.1.0"/>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.ustv.v2"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.firebase.iid.FirebaseInstanceIdService" android:exported="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.ustv.v2.firebaseinitprovider" android:initOrder="100"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    </application>
+</manifest>
