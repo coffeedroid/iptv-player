@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/bg_channel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="5dp" android:layout_marginRight="15dp" android:layout_marginBottom="5dp">
+        <com.makeramen.roundedimageview.RoundedImageView android:id="@+id/iv_thumb" android:layout_width="120dp" android:layout_height="80dp" android:src="@drawable/thumb_white" android:scaleType="centerCrop" android:layout_weight="0" app:riv_corner_radius="5dp"/>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_weight="1">
+            <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/white" android:id="@+id/name" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="HBO" android:singleLine="true"/>
+            <TextView android:textSize="12sp" android:textColor="#77ffffff" android:id="@+id/link" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="http://abc.d http://abc.d http://abc.d" android:maxLines="2"/>
+        </LinearLayout>
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_more" android:background="@drawable/selector_dark" android:padding="3dp" android:layout_width="35dp" android:layout_height="35dp" android:src="@drawable/ico_more_vertical"/>
+    </LinearLayout>
+</RelativeLayout>

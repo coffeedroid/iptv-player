@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="15dp" android:paddingTop="10dp" android:paddingRight="15dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+        <TextView android:textSize="16sp" android:textStyle="bold" android:id="@+id/tv_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="TextView" android:singleLine="true"/>
+        <TextView android:textSize="14sp" android:id="@+id/tv_last_check" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="TextView" android:singleLine="true"/>
+    </LinearLayout>
+    <ImageView android:id="@+id/iv_delete" android:background="@drawable/selector_dark" android:padding="5dp" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/btn_delete" android:onClick="onClick"/>
+</LinearLayout>

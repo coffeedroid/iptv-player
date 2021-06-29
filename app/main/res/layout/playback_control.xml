@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/rl_playbackcontrol" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ViewFlipper android:id="@+id/vf_play_pause" android:focusable="true" android:visibility="gone" android:nextFocusRight="@+id/iv_rotate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:id="@+id/iv_play" android:focusable="true" android:nextFocusRight="@+id/iv_pause" android:layout_width="70dp" android:layout_height="70dp" android:src="@drawable/selector_play_land"/>
+        <ImageView android:id="@+id/iv_pause" android:focusable="true" android:layout_width="70dp" android:layout_height="70dp" android:src="@drawable/selector_pause_land"/>
+    </ViewFlipper>
+    <RelativeLayout android:id="@+id/rl_header" android:background="@drawable/bg_gradient_back_transparent" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/iv_search" android:background="@drawable/selector_light" android:padding="5dp" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/btn_search" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        <ImageView android:id="@+id/iv_other_server" android:background="@drawable/selector_light" android:padding="8dp" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ico_other_server" android:layout_toLeftOf="@+id/iv_search" android:layout_centerVertical="true"/>
+        <ViewSwitcher android:id="@+id/vs_mrb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/iv_other_server" android:layout_centerVertical="true">
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/mrb" android:background="@drawable/selector_light" android:padding="7dp" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ico_chromecast_connected"/>
+            <com.ustv.player.p015ui.control.MyMediaRouteButton android:layout_gravity="center_vertical" android:id="@+id/media_route_button" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </ViewSwitcher>
+        <ImageView android:id="@+id/iv_back" android:background="@drawable/selector_light" android:padding="5dp" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/btn_close_white" android:layout_centerVertical="true"/>
+        <ImageView android:id="@+id/iv_pip" android:background="@drawable/selector_light" android:padding="7dp" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="5dp" android:src="@drawable/btn_fullscr_pic_in_pic" android:layout_toRightOf="@+id/iv_back" android:layout_centerVertical="true"/>
+        <TextView android:textSize="14sp" android:textColor="#ffffffff" android:id="@+id/tv_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="TextView" android:singleLine="true" android:layout_toLeftOf="@+id/vs_mrb" android:layout_toRightOf="@+id/iv_pip" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rl_footer" android:background="@drawable/bg_gradient_transparent_black" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_control" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="4">
+            <ViewFlipper android:id="@+id/vf_rotate" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginRight="10dp" android:layout_weight="1" android:layout_alignParentRight="true">
+                <ImageView android:id="@+id/iv_rotate_land" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/selector_rotate"/>
+                <ImageView android:id="@+id/iv_rotate_port" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/selector_rotate"/>
+            </ViewFlipper>
+            <ImageView android:id="@+id/iv_scale_type" android:padding="5dp" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginRight="10dp" android:src="@drawable/ic_zoom" android:layout_weight="1" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            <ImageView android:id="@+id/iv_record" android:padding="5dp" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginRight="10dp" android:src="@drawable/btn_fullscr_record" android:layout_weight="1" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            <ImageView android:id="@+id/iv_stream_alarm_off" android:padding="5dp" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginRight="10dp" android:src="@drawable/ic_alarm" android:layout_weight="1" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:onClick="onClick"/>
+            <ImageView android:id="@+id/iv_stream_info" android:padding="2dp" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginRight="10dp" android:src="@drawable/selector_stream_info" android:layout_weight="1" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        </LinearLayout>
+        <RelativeLayout android:id="@+id/progress_overlay" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/ll_control">
+            <TextView android:textSize="15sp" android:textColor="#ffffffff" android:id="@+id/tv_playing_time" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:text="00:00" android:layout_centerVertical="true"/>
+            <SeekBar android:id="@+id/seekbar" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:progress="0" android:indeterminate="false" android:layout_toLeftOf="@+id/tv_total_time" android:layout_toRightOf="@+id/tv_playing_time" android:layout_centerVertical="true"/>
+            <TextView android:textSize="15sp" android:textColor="#ffffffff" android:id="@+id/tv_total_time" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="00:00" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

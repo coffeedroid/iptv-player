@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/bg_dialog" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/iv_title" android:layout_width="wrap_content" android:layout_height="180dp" android:src="@drawable/img_no_signal_server" android:scaleType="centerCrop"/>
+            <RelativeLayout android:id="@+id/rl_title" android:background="@drawable/bg_header_mdc_dialog" android:layout_width="match_parent" android:layout_height="60dp">
+                <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayout" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <ImageView android:id="@+id/iv_icon" android:layout_width="30dp" android:layout_height="30dp" android:src="@mipmap/ic_launcher" android:adjustViewBounds="true"/>
+                    <TextView android:textSize="18dp" android:textStyle="bold" android:textColor="#ff33a8ff" android:layout_gravity="center" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="New Text" android:singleLine="true"/>
+                </LinearLayout>
+                <View android:background="#ffd8d8d8" android:layout_width="match_parent" android:layout_height="1dp" android:layout_below="@+id/linearLayout"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/rl_content" android:padding="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="100dp"/>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="80dp" android:weightSum="2">
+                <TextView android:textColor="#ff676473" android:id="@+id/tv_cancel" android:background="@drawable/btn_cancel" android:text="Cancel" android:layout_weight="1" style="@style/MDCButton"/>
+                <TextView android:textColor="#ffffffff" android:id="@+id/tv_ok" android:background="@drawable/btn_round_red" android:text="OK" android:layout_weight="1" style="@style/MDCButton"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</ScrollView>

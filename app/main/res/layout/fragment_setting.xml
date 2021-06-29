@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/header_height">
+        <TextView android:text="Settings" style="@style/header_text"/>
+    </RelativeLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@+id/rl_pro" android:visibility="gone" android:layout_width="match_parent" android:layout_height="60dp">
+                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/thumb_settings" android:scaleType="centerCrop"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_centerVertical="true">
+                    <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="USTV PRO"/>
+                    <TextView android:textSize="14sp" android:textColor="#aaffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thank you for using our product"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <android.support.constraint.ConstraintLayout android:id="@+id/cl_upgrade" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageView android:id="@+id/iv_upgrade" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/upgrade_greet" android:scaleType="centerCrop" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+                <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@+id/textView6" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="@string/upgrade_to_pro" android:layout_centerInParent="true" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="@+id/imageView13" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="@+id/imageView13"/>
+                <Button android:textSize="15sp" android:textColor="#ff0285d5" android:id="@+id/btn_learn_more" android:background="@drawable/btn_learn_more" android:visibility="gone" android:layout_width="120dp" android:layout_height="40dp" android:layout_marginTop="24dp" android:text="Learn More" android:textAllCaps="false" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/textView6"/>
+            </android.support.constraint.ConstraintLayout>
+            <TextView android:text="Premium Features" style="@style/settings_text_header"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_themes" style="@style/settings_item">
+                <TextView android:textSize="16sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Themes" android:layout_weight="1"/>
+                <TextView android:textSize="16sp" android:textColor="@color/white" android:id="@+id/tv_mode_themes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Black"/>
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ico_arrow_right"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_pip" android:layout_marginTop="1dp" style="@style/settings_item">
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:textSize="16sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Picture In Picture mode"/>
+                    <TextView android:textColor="@color/settings_text_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Allows to watch videos while using other apps"/>
+                </LinearLayout>
+                <com.ustv.player.p015ui.control.ToggleView android:id="@+id/tog_pip" app:checked="false" style="@style/ToggleView"/>
+            </LinearLayout>
+            <TextView android:text="Player Settings" style="@style/settings_text_header"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_diable_video" android:visibility="gone" android:layout_marginTop="1dp" style="@style/settings_item">
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:textSize="16sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Disable Video"/>
+                    <TextView android:textColor="@color/settings_text_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Used to watch video while discover the app"/>
+                </LinearLayout>
+                <com.ustv.player.p015ui.control.ToggleView android:id="@+id/tog_diable_video" app:checked="false" style="@style/ToggleView"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_sleep_timer" android:visibility="gone" android:layout_marginTop="1dp" style="@style/settings_item">
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:textSize="16sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sleep Timer"/>
+                    <TextView android:textColor="@color/settings_text_content" android:id="@+id/tv_sleep_timer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--:--"/>
+                </LinearLayout>
+                <com.ustv.player.p015ui.control.ToggleView android:id="@+id/tog_sleep_timer" app:checked="false" style="@style/ToggleView"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_marginTop="1dp" style="@style/settings_item">
+                <TextView android:textSize="16sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Connection Timeout"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                    <SeekBar android:id="@+id/sek_timeout" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+                    <TextView android:id="@+id/tv_timeout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="120s"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_acceleration" android:layout_marginTop="1dp" style="@style/settings_item">
+                <TextView android:textSize="16sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Video Decoder" android:layout_weight="1"/>
+                <TextView android:textSize="16sp" android:textColor="@color/white" android:id="@+id/tv_mode_acceleration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="H/W+"/>
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ico_arrow_right"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_recoding_folder" android:layout_marginTop="1dp" style="@style/settings_item">
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:textSize="16sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Recording Folder"/>
+                    <TextView android:textColor="@color/settings_text_content" android:id="@+id/tv_recoding_path" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="/mnt/sdcard/..."/>
+                </LinearLayout>
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ico_arrow_right"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_recording" android:visibility="gone" android:layout_marginTop="1dp" style="@style/settings_item">
+                <TextView android:textSize="16sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Recording File format" android:layout_weight="1"/>
+                <TextView android:textSize="16sp" android:textColor="@color/white" android:id="@+id/tv_mode_recording" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="mp4"/>
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ico_arrow_right"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_update_channel_list" android:layout_marginTop="20dp" style="@style/settings_item">
+                <TextView android:textSize="16sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Update Channel List" android:layout_weight="1"/>
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ico_arrow_right"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_reset" android:layout_marginTop="1dp" android:layout_marginBottom="20dp" style="@style/settings_item">
+                <TextView android:textSize="16sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Reset All Data" android:layout_weight="1"/>
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ico_arrow_right"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_open_setting" android:layout_marginTop="20dp" style="@style/settings_item">
+                <TextView android:textSize="16sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Open App Settings" android:layout_weight="1"/>
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ico_arrow_right"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_ads" android:visibility="gone" android:layout_marginTop="0dp" android:layout_marginBottom="0dp" style="@style/settings_item">
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1">
+                    <TextView android:textSize="0sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="0dp" android:text="Use Personalized Ads"/>
+                    <TextView android:textColor="@color/settings_text_content" android:layout_width="0dp" android:layout_height="0dp" android:text="Allow to use advertising id to process your personal data in order to customizer content and your experience"/>
+                </LinearLayout>
+                <com.ustv.player.p015ui.control.ToggleView android:id="@+id/tog_ads" android:visibility="gone" app:checked="false" style="@style/ToggleView"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_open_redoing_folder" android:visibility="gone" android:layout_marginTop="1dp" android:layout_marginBottom="20dp" style="@style/settings_item">
+                <TextView android:textSize="16sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Reveal record folder" android:layout_weight="1"/>
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ico_arrow_right"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

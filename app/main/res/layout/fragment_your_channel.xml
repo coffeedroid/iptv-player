@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include layout="@layout/layout_header"/>
+        <RadioGroup android:orientation="horizontal" android:id="@+id/rg_filter" android:background="@drawable/bg_radio_button" android:layout_width="match_parent" android:layout_height="36dp" android:layout_marginLeft="15dp" android:layout_marginTop="8dp" android:layout_marginRight="15dp" android:layout_marginBottom="8dp" android:weightSum="3">
+            <RadioButton android:textSize="14sp" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/rb_fav" android:tag="fav" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:button="@android:color/transparent" android:text="Favorites" android:layout_weight="1"/>
+            <RadioButton android:textSize="14sp" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/rb_custom" android:tag="custom" android:background="@drawable/bg_radio_button_selected" android:focusable="true" android:layout_width="match_parent" android:layout_height="match_parent" android:button="@android:color/transparent" android:text="Custom" android:layout_weight="1">
+                <requestFocus/>
+            </RadioButton>
+            <RadioButton android:textSize="14sp" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/rb_recording" android:tag="recording" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:button="@android:color/transparent" android:text="Recording" android:layout_weight="1"/>
+        </RadioGroup>
+        <View android:id="@+id/indicator" style="@style/indicator_header"/>
+        <ViewFlipper android:id="@+id/vf_list" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:paddingTop="5dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ListView android:id="@+id/lv_fav" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="@null" android:dividerHeight="1px"/>
+                <TextView android:textSize="14sp" android:textColor="#aaffffff" android:gravity="center" android:id="@+id/tv_no_fav" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Tap on the star button to add one you like"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ListView android:id="@+id/lv_custom" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="@null" android:dividerHeight="1px"/>
+                <RelativeLayout android:id="@+id/ll_no_custom" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/iv_add_custom" android:background="@drawable/selector_add_custom" android:padding="10dp" android:layout_width="100dp" android:layout_height="100dp" android:src="@drawable/ico_add_large" android:scaleType="centerCrop"/>
+                        <TextView android:textSize="14sp" android:textColor="#aaffffff" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp" android:text="Create and customize your first own channel"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:paddingTop="5dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ListView android:id="@+id/lv_recording" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="@null" android:dividerHeight="1px"/>
+                <TextView android:textSize="14sp" android:textColor="#aaffffff" android:gravity="center" android:id="@+id/tv_no_recording" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Record any event you like for watching again"/>
+            </LinearLayout>
+        </ViewFlipper>
+    </LinearLayout>
+</RelativeLayout>

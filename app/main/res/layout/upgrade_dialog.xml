@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <Button android:textColor="#ffffffff" android:id="@+id/b_upgrade" android:background="@drawable/bg_upgrade" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Upgrade"/>
+    <TextView android:textSize="13sp" android:textColor="#77000000" android:gravity="center" android:id="@+id/tv_upgrade" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="16dp" android:text="Upgrade to Pro version and enjoy unlimited usage of this premium feature "/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_watch_video" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textColor="#ffffffff" android:id="@+id/b_watch_video" android:background="@drawable/bg_view_video" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Watch a video ad"/>
+        <TextView android:textSize="13sp" android:textColor="#77000000" android:gravity="center" android:id="@+id/tv_watch" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="16dp" android:text="Watch a video ad and enjoy this feature one time"/>
+    </LinearLayout>
+    <Button android:textColor="#77000000" android:id="@+id/b_later" android:background="@drawable/bg_later" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Later"/>
+</LinearLayout>

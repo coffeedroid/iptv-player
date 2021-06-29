@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="right" android:orientation="horizontal" android:paddingLeft="10dp" android:paddingTop="10dp" android:paddingRight="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_thumb" android:layout_width="40dp" android:layout_height="40dp"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+        <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="#ffffffff" android:layout_gravity="center_vertical" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Notification" android:singleLine="true"/>
+        <TextView android:textSize="13sp" android:textColor="#aaffffff" android:layout_gravity="center_vertical" android:id="@+id/tv_des" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Description" android:lines="2"/>
+        <TextView android:textSize="12sp" android:textColor="#77ffffff" android:layout_gravity="center_vertical" android:id="@+id/tv_time" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="2dp" android:text="Today" android:singleLine="true"/>
+    </LinearLayout>
+    <View android:layout_gravity="center_vertical" android:id="@+id/v_spot" android:background="@drawable/bg_spot" android:layout_width="14dp" android:layout_height="14dp" android:layout_marginLeft="10dp"/>
+</LinearLayout>

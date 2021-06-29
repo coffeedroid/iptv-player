@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/bg_channel" android:padding="7dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="5dp" android:layout_marginRight="15dp" android:layout_marginBottom="5dp">
+        <com.makeramen.roundedimageview.RoundedImageView android:id="@+id/iv_thumb" android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/thumb_white" android:scaleType="centerCrop" android:layout_weight="0" app:riv_corner_radius="1dp"/>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_weight="1">
+            <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/white" android:id="@+id/name" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="HBO" android:singleLine="true"/>
+            <TextView android:textSize="12sp" android:textColor="#77ffffff" android:id="@+id/des" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="HBO" android:singleLine="true"/>
+            <TextView android:textSize="12sp" android:textColor="#77ffffff" android:id="@+id/viewer" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="100 viewer today" android:singleLine="true"/>
+        </LinearLayout>
+        <ViewSwitcher android:layout_gravity="center_vertical" android:id="@+id/vs_fav" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="10dp">
+            <ImageView android:id="@+id/iv_fav" android:background="@drawable/selector_dark" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/btn_favourite_60"/>
+            <ImageView android:id="@+id/iv_unfav" android:background="@drawable/selector_dark" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/btn_favourite_yeallow"/>
+        </ViewSwitcher>
+    </LinearLayout>
+</RelativeLayout>

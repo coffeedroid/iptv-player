@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/bg_channel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp">
+        <com.makeramen.roundedimageview.RoundedImageView android:id="@+id/iv_thumb" android:layout_width="120dp" android:layout_height="80dp" android:layout_margin="10dp" android:src="@drawable/thumb_white" android:scaleType="centerCrop" android:layout_weight="0" app:riv_corner_radius="5dp"/>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@color/white" android:id="@+id/name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="HBO" android:singleLine="true"/>
+            <TextView android:textSize="12sp" android:textColor="#aaffffff" android:id="@+id/type" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Recently" android:singleLine="true"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ViewSwitcher android:layout_gravity="center_vertical" android:id="@+id/vs_fav" android:layout_width="40dp" android:layout_height="40dp">
+                    <ImageView android:id="@+id/iv_fav" android:background="@drawable/selector_dark" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/btn_favourite_60"/>
+                    <ImageView android:id="@+id/iv_unfav" android:background="@drawable/selector_dark" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/btn_favourite_yeallow"/>
+                </ViewSwitcher>
+                <ImageView android:id="@+id/play" android:background="@drawable/selector_dark" android:padding="6dp" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="10dp" android:src="@drawable/btn_play"/>
+                <ImageView android:id="@+id/record" android:background="@drawable/selector_dark" android:padding="6dp" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="10dp" android:src="@drawable/btn_fullscr_record"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

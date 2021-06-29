@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <View android:id="@+id/sb__divider" android:layout_width="match_parent" android:layout_height="3dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:ellipsize="end" android:id="@+id/sb__text" android:focusable="true" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" style="@style/Snackbar.Text"/>
+        <TextView android:gravity="right" android:layout_gravity="center_vertical" android:id="@+id/sb__action" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Snackbar.Text.Action"/>
+    </LinearLayout>
+</merge>

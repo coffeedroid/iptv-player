@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/iv_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+    <RelativeLayout android:orientation="vertical" android:background="@drawable/bg_urls" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:layout_centerInParent="true">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_header" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="10dp">
+            <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/colorPrimaryDark" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/tv_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:text="HBO Server" android:singleLine="true" android:layout_weight="1"/>
+            <TextView android:textColor="@color/Red" android:layout_gravity="center_vertical" android:id="@+id/cb_recording" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15dp" android:checked="true" android:text="Rec" android:layout_weight="0"/>
+        </LinearLayout>
+        <ScrollView android:id="@+id/rl_list_url" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_below="@+id/ll_header">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_urls" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

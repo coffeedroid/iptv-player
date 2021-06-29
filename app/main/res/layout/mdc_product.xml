@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/rl_container" android:background="#00000000" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_content" android:background="#ffffffff" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <RelativeLayout android:background="#ffffffff" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/iv_banner" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/live_stream_media" android:adjustViewBounds="true" android:cropToPadding="false"/>
+                <LinearLayout android:orientation="horizontal" android:paddingLeft="5dp" android:paddingTop="15dp" android:paddingRight="5dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_icon" android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/ic_lsp"/>
+                    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp">
+                        <TextView android:textSize="20sp" android:textColor="#ff3a465e" android:ellipsize="end" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Live Stream Player" android:singleLine="true"/>
+                        <TextView android:textSize="16sp" android:textColor="#ff99a0b4" android:ellipsize="end" android:id="@+id/tv_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Discover a world of free live streams" android:maxLines="2"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="60dp" android:weightSum="2">
+            <TextView android:textSize="18dp" android:textColor="#ff99a0b4" android:gravity="center" android:id="@+id/tv_cancel" android:background="@drawable/bg_white_no_corner" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Cancel" android:singleLine="true" android:layout_weight="1"/>
+            <TextView android:textSize="18dp" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/tv_ok" android:background="@drawable/bg_blue_no_corner" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="OK" android:singleLine="true" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

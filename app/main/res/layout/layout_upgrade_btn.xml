@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="81dp" android:layout_height="30dp" android:onClick="onUpgrade">
+    <ImageView android:layout_width="81dp" android:layout_height="30dp" android:src="@drawable/btn_yeallow_upgrade"/>
+    <TextView android:textSize="10sp" android:textColor="#ff77280d" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="UPGRADE" android:layout_centerInParent="true"/>
+    <ImageView android:id="@+id/iv_narrow_up" android:layout_width="10dp" android:layout_height="10dp" android:layout_marginLeft="5dp" android:src="@drawable/ico_upgrade_arrow_up" android:layout_centerVertical="true"/>
+</RelativeLayout>

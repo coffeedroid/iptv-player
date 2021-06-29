@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/header_height">
+        <TextView android:text="More" style="@style/header_text"/>
+    </RelativeLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@+id/rl_pro" android:visibility="visible" android:layout_width="match_parent" android:layout_height="60dp">
+                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/thumb_settings" android:scaleType="centerCrop"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_centerVertical="true">
+                    <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="USTV PRO"/>
+                    <TextView android:textSize="14sp" android:textColor="#aaffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thank you for using our product"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/iv_pro_info" android:background="@drawable/selector_dark" android:padding="5dp" android:layout_width="35dp" android:layout_height="35dp" android:layout_marginRight="10dp" android:src="@drawable/btn_fullscr_info" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:onClick="onClick"/>
+            </RelativeLayout>
+            <android.support.constraint.ConstraintLayout android:id="@+id/cl_upgrade" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageView android:id="@+id/iv_upgrade" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/upgrade_greet" android:scaleType="centerCrop" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+                <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@+id/textView6" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/upgrade_to_pro" android:layout_centerInParent="true"/>
+                <Button android:textSize="15sp" android:textColor="#ff0285d5" android:id="@+id/btn_learn_more" android:background="@drawable/btn_learn_more" android:visibility="gone" android:layout_width="120dp" android:layout_height="40dp" android:layout_marginTop="24dp" android:text="Learn More" android:textAllCaps="false" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/textView6"/>
+            </android.support.constraint.ConstraintLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_account" android:background="@drawable/selector_settings_item" android:layout_width="match_parent" android:layout_height="@dimen/item_more_height" android:layout_marginTop="20dp">
+                <ImageView android:padding="@dimen/item_icon_padding" android:layout_width="@dimen/item_icon_size" android:layout_height="match_parent" android:layout_marginLeft="@dimen/item_icon_margin" android:layout_marginRight="@dimen/item_icon_margin" android:src="@drawable/ico_purchase"/>
+                <TextView android:textSize="@dimen/frag_more_item_text" android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@+id/tv_restore" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Restore Purchase" android:layout_weight="1"/>
+                <ImageView android:padding="11dp" android:layout_width="@dimen/item_icon_size" android:layout_height="match_parent" android:src="@drawable/ico_arrow_right"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_restore_subscription" android:background="@drawable/selector_settings_item" android:layout_width="match_parent" android:layout_height="@dimen/item_more_height">
+                <ImageView android:padding="@dimen/item_icon_padding" android:layout_width="@dimen/item_icon_size" android:layout_height="match_parent" android:layout_marginLeft="@dimen/item_icon_margin" android:layout_marginRight="@dimen/item_icon_margin" android:src="@drawable/ico_purchase"/>
+                <TextView android:textSize="@dimen/frag_more_item_text" android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@+id/tv_active" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Restore Subscription" android:layout_weight="1"/>
+                <ImageView android:padding="11dp" android:layout_width="@dimen/item_icon_size" android:layout_height="match_parent" android:src="@drawable/ico_arrow_right"/>
+            </LinearLayout>
+            <TextView android:layout_marginTop="20dp" android:text="Premium Features" style="@style/settings_text_header"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_request_channel" android:background="@drawable/selector_settings_item" android:layout_width="match_parent" android:layout_height="@dimen/item_more_height">
+                <ImageView android:padding="@dimen/item_icon_padding" android:layout_width="@dimen/item_icon_size" android:layout_height="match_parent" android:layout_marginLeft="@dimen/item_icon_margin" android:layout_marginRight="@dimen/item_icon_margin" android:src="@drawable/ic_more_request_channel"/>
+                <TextView android:textSize="16sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Request Channel" android:layout_weight="1"/>
+                <ImageView android:padding="11dp" android:layout_width="@dimen/item_icon_size" android:layout_height="match_parent" android:src="@drawable/ico_arrow_right"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_rate_us" android:background="@drawable/selector_settings_item" android:layout_width="match_parent" android:layout_height="@dimen/item_more_height" android:layout_marginTop="20dp">
+                <ImageView android:padding="@dimen/item_icon_padding" android:layout_width="@dimen/item_icon_size" android:layout_height="match_parent" android:layout_marginLeft="@dimen/item_icon_margin" android:layout_marginRight="@dimen/item_icon_margin" android:src="@drawable/ic_more_rate_us"/>
+                <TextView android:textSize="@dimen/frag_more_item_text" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Rate Us" android:layout_weight="1"/>
+                <ImageView android:padding="11dp" android:layout_width="@dimen/item_icon_size" android:layout_height="match_parent" android:src="@drawable/ico_arrow_right"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_community" android:background="@drawable/selector_settings_item" android:layout_width="match_parent" android:layout_height="@dimen/item_more_height" android:layout_marginTop="0.5dp">
+                <ImageView android:padding="@dimen/item_icon_padding" android:layout_width="@dimen/item_icon_size" android:layout_height="match_parent" android:layout_marginLeft="@dimen/item_icon_margin" android:layout_marginRight="@dimen/item_icon_margin" android:src="@drawable/ic_more_community"/>
+                <TextView android:textSize="@dimen/frag_more_item_text" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Community" android:layout_weight="1"/>
+                <ImageView android:padding="11dp" android:layout_width="@dimen/item_icon_size" android:layout_height="match_parent" android:src="@drawable/ico_arrow_right"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_help" android:background="@drawable/selector_settings_item" android:layout_width="match_parent" android:layout_height="@dimen/item_more_height" android:layout_marginTop="0.5dp">
+                <ImageView android:padding="@dimen/item_icon_padding" android:layout_width="@dimen/item_icon_size" android:layout_height="match_parent" android:layout_marginLeft="@dimen/item_icon_margin" android:layout_marginRight="@dimen/item_icon_margin" android:src="@drawable/ic_more_help"/>
+                <TextView android:textSize="@dimen/frag_more_item_text" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Help" android:layout_weight="1"/>
+                <ImageView android:padding="11dp" android:layout_width="@dimen/item_icon_size" android:layout_height="match_parent" android:src="@drawable/ico_arrow_right"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_share_friend" android:background="@drawable/selector_settings_item" android:layout_width="match_parent" android:layout_height="@dimen/item_more_height" android:layout_marginTop="0.5dp">
+                <ImageView android:padding="@dimen/item_icon_padding" android:layout_width="@dimen/item_icon_size" android:layout_height="match_parent" android:layout_marginLeft="@dimen/item_icon_margin" android:layout_marginRight="@dimen/item_icon_margin" android:src="@drawable/ic_more_share_friend"/>
+                <TextView android:textSize="@dimen/frag_more_item_text" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Share Friend" android:layout_weight="1"/>
+                <ImageView android:padding="11dp" android:layout_width="@dimen/item_icon_size" android:layout_height="match_parent" android:src="@drawable/ico_arrow_right"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_contact_us" android:background="@drawable/selector_settings_item" android:layout_width="match_parent" android:layout_height="@dimen/item_more_height" android:layout_marginTop="20dp">
+                <ImageView android:padding="@dimen/item_icon_padding" android:layout_width="@dimen/item_icon_size" android:layout_height="match_parent" android:layout_marginLeft="@dimen/item_icon_margin" android:layout_marginRight="@dimen/item_icon_margin" android:src="@drawable/ic_more_contact_us"/>
+                <TextView android:textSize="@dimen/frag_more_item_text" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Contact Us" android:layout_weight="1"/>
+                <ImageView android:padding="11dp" android:layout_width="@dimen/item_icon_size" android:layout_height="match_parent" android:src="@drawable/ico_arrow_right"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_end_user" android:background="@drawable/selector_settings_item" android:layout_width="match_parent" android:layout_height="@dimen/item_more_height" android:layout_marginTop="0.5dp">
+                <ImageView android:padding="@dimen/item_icon_padding" android:layout_width="@dimen/item_icon_size" android:layout_height="match_parent" android:layout_marginLeft="@dimen/item_icon_margin" android:layout_marginRight="@dimen/item_icon_margin" android:src="@drawable/ic_more_end_user"/>
+                <TextView android:textSize="@dimen/frag_more_item_text" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:text="End-User License" android:layout_weight="1"/>
+                <ImageView android:padding="11dp" android:layout_width="@dimen/item_icon_size" android:layout_height="match_parent" android:src="@drawable/ico_arrow_right"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_about" android:background="@drawable/selector_settings_item" android:layout_width="match_parent" android:layout_height="@dimen/item_more_height" android:layout_marginTop="0.5dp" android:layout_marginBottom="20dp">
+                <ImageView android:padding="@dimen/item_icon_padding" android:layout_width="@dimen/item_icon_size" android:layout_height="match_parent" android:layout_marginLeft="@dimen/item_icon_margin" android:layout_marginRight="@dimen/item_icon_margin" android:src="@drawable/ic_more_about"/>
+                <TextView android:textSize="@dimen/frag_more_item_text" android:textColor="@color/white" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:text="About" android:layout_weight="1"/>
+                <ImageView android:padding="11dp" android:layout_width="@dimen/item_icon_size" android:layout_height="match_parent" android:src="@drawable/ico_arrow_right"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

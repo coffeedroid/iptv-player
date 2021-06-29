@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@+id/rl_notification" android:background="@drawable/selector_dark" android:padding="0dp" android:layout_width="0dp" android:layout_height="0dp" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:id="@+id/iv_notification" android:layout_width="45dp" android:layout_height="45dp" android:src="@drawable/icon_notification" android:layout_centerVertical="true"/>
+            <RelativeLayout android:id="@+id/rl_number_of_unread_notification" android:background="@drawable/bg_number_unread_notification" android:visibility="gone" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginTop="3dp" android:layout_marginRight="3dp" android:layout_alignParentRight="true">
+                <TextView android:textSize="14sp" android:textColor="#ffffffff" android:id="@+id/tv_number_of_unread_notification" android:padding="1px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <TextView android:textSize="14sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@+id/et_search" android:background="@drawable/bg_et_search" android:paddingLeft="10dp" android:layout_width="match_parent" android:layout_height="@dimen/search_edt_height" android:layout_marginLeft="15dp" android:layout_marginTop="7dp" android:layout_marginBottom="7dp" android:hint="Search channels" android:singleLine="true" android:layout_toLeftOf="@+id/rl_notification" android:layout_centerVertical="true">
+            <requestFocus/>
+        </TextView>
+    </RelativeLayout>
+</LinearLayout>

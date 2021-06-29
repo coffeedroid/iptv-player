@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:textStyle="bold" android:layout_gravity="center" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Settings"/>
+    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:layout_gravity="center" android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="UMS Server Address:"/>
+    <EditText android:id="@+id/et_server" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="20dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp" android:text="ums://tcp:101.99.13.193:5119/" android:hint="ums://tcp:server:port/" android:ems="10">
+        <requestFocus/>
+    </EditText>
+</LinearLayout>
