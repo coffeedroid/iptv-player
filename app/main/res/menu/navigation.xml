@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:icon="@drawable/ico_nav_home" android:id="@+id/navigation_home" android:title="@string/title_home"/>
+    <item android:icon="@drawable/ico_nav_your_channels" android:id="@+id/navigation_your_channels" android:title="Favorites"/>
+    <item android:icon="@drawable/ico_nav_channels" android:id="@+id/navigation_channel" android:title="Channels"/>
+    <item android:icon="@drawable/ico_nav_settings" android:id="@+id/navigation_setting" android:title="Settings"/>
+</menu>

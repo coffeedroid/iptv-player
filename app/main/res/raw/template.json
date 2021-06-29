@@ -1,0 +1,31 @@
+[
+  {
+    "iconNormal": "ico_blue_airplay",
+    "iconSelected": "ico_navi_airplay",
+    "title": "AIRPLAY",
+    "description": "Diego Costa thực hiện không thành công nhưng VAR đã giúp cho Atletico được đá lại khi thủ thành Stegen mắc lỗi di chuyển sớm. Cuối cùng, Saul Niguez đã mang về bàn gỡ hòa 1-1 sau khi đánh lừa được đối phương",
+    "price": "3.45$",
+    "discountPrice": "1.22$",
+    "popularItem": false,
+    "masterItem": true
+  },{
+    "iconNormal": "ico_blue_airplay",
+    "iconSelected": "ico_navi_airplay",
+    "title": "AIRPLAY",
+    "description": "Diego Costa thực hiện không thành công nhưng VAR đã giúp cho Atletico được đá lại khi thủ thành Stegen mắc lỗi di chuyển sớm. Cuối cùng, Saul Niguez đã mang về bàn gỡ hòa 1-1 sau khi đánh lừa được đối phương",
+    "price": "3.45$",
+    "discountPrice": "1.22$",
+    "popularItem": false,
+    "masterItem": true
+  },
+  {
+    "iconNormal": "ico_blue_airplay",
+    "iconSelected": "ico_navi_airplay",
+    "title": "AIRPLAY",
+    "description": "Diego Costa thực hiện không thành công nhưng VAR đã giúp cho Atletico được đá lại khi thủ thành Stegen mắc lỗi di chuyển sớm. Cuối cùng, Saul Niguez đã mang về bàn gỡ hòa 1-1 sau khi đánh lừa được đối phương",
+    "price": "3.45$",
+    "discountPrice": "1.22$",
+    "popularItem": false,
+    "masterItem": true
+  }
+]
