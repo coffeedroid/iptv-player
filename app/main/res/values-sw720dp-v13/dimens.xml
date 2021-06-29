@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="calendar_height_land">310dp</dimen>
+    <dimen name="calendar_height_portrait">476dp</dimen>
+    <dimen name="calendar_width_land">272dp</dimen>
+    <dimen name="calendar_width_portrait">416dp</dimen>
+    <dimen name="header_width">200dp</dimen>
+    <dimen name="mr_dialog_fixed_width_major">50%</dimen>
+    <dimen name="mr_dialog_fixed_width_minor">70%</dimen>
+    <dimen name="time_circle_width">420dp</dimen>
+    <dimen name="year_item_padding">48dp</dimen>
+</resources>
