@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.github.florent37.shapeofview.shapes.RoundRectView android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="4dp" app:shape_roundRect_borderColor="@android:color/transparent" app:shape_roundRect_borderWidth="1dp" app:shape_roundRect_bottomLeftRadius="10dp" app:shape_roundRect_bottomRightRadius="10dp" app:shape_roundRect_topLeftRadius="10dp" app:shape_roundRect_topRightRadius="10dp">
+        <WebView android:id="@+id/webview" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </com.github.florent37.shapeofview.shapes.RoundRectView>
+</LinearLayout>

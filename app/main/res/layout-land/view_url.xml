@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/bg_url" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="100dp" android:layout_marginTop="5dp" android:layout_marginRight="100dp" android:layout_marginBottom="5dp">
+        <com.makeramen.roundedimageview.RoundedImageView android:layout_gravity="center_vertical" android:id="@+id/iv_thumb" android:layout_width="70dp" android:layout_height="70dp" android:src="@drawable/thumb_white" android:scaleType="centerCrop" android:layout_weight="0" app:riv_corner_radius="5dp"/>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp">
+            <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/white" android:id="@+id/source" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="HBO" android:singleLine="true"/>
+            <TextView android:textSize="12sp" android:textColor="#77ffffff" android:id="@+id/view" android:padding="2dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="28 viewed today" android:singleLine="true"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="3">
+                <TextView android:textSize="12sp" android:textColor="#77ffffff" android:id="@+id/server_quality" android:padding="2dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Quality" android:layout_weight="1"/>
+                <TextView android:textSize="12sp" android:textColor="#77ffffff" android:id="@+id/speed" android:padding="2dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Speed" android:layout_weight="1"/>
+                <TextView android:textSize="12sp" android:textColor="#77ffffff" android:id="@+id/last_online" android:padding="2dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Last Online" android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

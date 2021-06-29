@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/bottom_sheet_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@+id/sheetContentLayout" android:background="@android:color/white" android:layout_width="300dp" android:layout_height="wrap_content" android:elevation="4dp">
+        <FrameLayout android:id="@+id/pickerTitleHeader" android:background="@color/picker_background" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginBottom="20dp">
+            <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@android:color/white" android:layout_gravity="center" android:id="@+id/sheetTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="The title"/>
+        </FrameLayout>
+        <com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker android:id="@+id/picker" android:layout_width="match_parent" android:layout_height="230dp" android:layout_weight="1" app:picker_curved="false" app:picker_cyclic="true" app:picker_selectedTextColor="@color/picker_background" app:picker_textSize="20sp" app:picker_visibleItemCount="5"/>
+        <FrameLayout android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="20dp">
+            <TextView android:textStyle="bold" android:textColor="@color/picker_background" android:gravity="center" android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/buttonOk" android:background="?android:attr/selectableItemBackground" android:layout_width="wrap_content" android:layout_height="match_parent" android:minWidth="80dp" android:text="@android:string/ok" android:textAllCaps="true"/>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>
