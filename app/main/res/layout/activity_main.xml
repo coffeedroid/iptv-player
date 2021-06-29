@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/container" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/iv_blur" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+    <ImageView android:id="@+id/iv_background" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+    <RelativeLayout android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+        <android.support.p000v4.view.ViewPager android:id="@+id/vp_content" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/indicator"/>
+        <View android:id="@+id/indicator" android:layout_above="@+id/navigation" style="@style/indicator_header"/>
+        <p017io.alterac.blurkit.BlurLayout android:id="@+id/blurLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/indicator" android:layout_alignParentBottom="true" app:blk_blurRadius="25" app:blk_downscaleFactor="0.6" app:blk_fps="0"/>
+        <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx android:id="@+id/navigation" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" app:menu="@menu/navigation"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/iv_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+    <RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/header_height">
+            <TextView android:text="Restore Purchase" style="@style/header_text"/>
+            <ImageView style="@style/header_icon_close"/>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="30dp" android:layout_marginRight="30dp" android:layout_centerInParent="true">
+            <RelativeLayout android:orientation="horizontal" android:id="@+id/rl_email" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:gravity="center_horizontal" android:id="@+id/et_email" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Email" android:singleLine="true" android:inputType="textEmailAddress" android:imeOptions="actionDone"/>
+                <ImageView android:id="@+id/iv_checked" android:visibility="gone" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ico_wrong" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                <ProgressBar android:id="@+id/pb_loading" android:visibility="gone" android:layout_width="20dp" android:layout_height="20dp" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <TextView android:textSize="13sp" android:textColor="#aaffffff" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@+id/tv_guide" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Email you used to make purchase"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_subs_id" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:gravity="center_horizontal" android:id="@+id/et_sub_id" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:hint="Subscription ID" android:singleLine="true" android:imeOptions="actionDone"/>
+                <TextView android:textSize="13sp" android:textColor="#aaffffff" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Please enter the Subscription ID which was sent to your mailbox to verify your purchase"/>
+            </LinearLayout>
+            <Button android:textColor="#ff666666" android:id="@+id/btn_next" android:background="@drawable/btn_login_facebook" android:layout_width="match_parent" android:layout_height="@dimen/login_button_height" android:layout_marginTop="100dp" android:text="Next"/>
+            <Button android:textColor="#ff666666" android:id="@+id/btn_activated_device" android:background="@drawable/btn_login_facebook" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/login_button_height" android:layout_marginTop="50dp" android:text="Activated Devices"/>
+        </LinearLayout>
+        <ViewFlipper android:id="@+id/vf_infomation" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_weight="1">
+            <android.support.constraint.ConstraintLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/et_email_1" android:hint="Email" android:singleLine="true" android:inputType="textEmailAddress" android:imeOptions="actionDone" style="@style/edittext"/>
+                <EditText android:id="@+id/et_password" android:hint="Password" android:layout_below="@+id/et_email_1" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/et_email_1" style="@style/edittext"/>
+                <ImageView android:id="@+id/iv_checked_1" android:visibility="gone" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginTop="8dp" android:layout_marginBottom="10dp" android:src="@drawable/ico_checked" android:layout_marginEnd="8dp" app:layout_constraintBottom_toTopOf="@+id/et_password" app:layout_constraintEnd_toEndOf="@+id/et_email_1" app:layout_constraintTop_toTopOf="@+id/et_email_1"/>
+            </android.support.constraint.ConstraintLayout>
+            <EditText android:id="@+id/et_repassword" android:visibility="gone" android:hint="Re-password" style="@style/edittext"/>
+        </ViewFlipper>
+        <RelativeLayout android:gravity="center" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="@dimen/header_height">
+            <ViewFlipper android:id="@+id/vf_dot_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6dp" android:layout_marginRight="6dp" android:layout_centerHorizontal="true">
+                <ImageView android:layout_width="@dimen/dot_size" android:layout_height="@dimen/dot_size" android:src="@drawable/dot_active"/>
+                <ImageView android:layout_width="@dimen/dot_size" android:layout_height="@dimen/dot_size" android:src="@drawable/dot_normal"/>
+            </ViewFlipper>
+            <ViewFlipper android:id="@+id/vf_dot_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_toLeftOf="@+id/vf_dot_2">
+                <ImageView android:layout_width="@dimen/dot_size" android:layout_height="@dimen/dot_size" android:src="@drawable/dot_active"/>
+                <ImageView android:layout_width="@dimen/dot_size" android:layout_height="@dimen/dot_size" android:src="@drawable/dot_normal"/>
+            </ViewFlipper>
+            <ViewFlipper android:id="@+id/vf_dot_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_toRightOf="@+id/vf_dot_2">
+                <ImageView android:layout_width="@dimen/dot_size" android:layout_height="@dimen/dot_size" android:src="@drawable/dot_active"/>
+                <ImageView android:layout_width="@dimen/dot_size" android:layout_height="@dimen/dot_size" android:src="@drawable/dot_normal"/>
+            </ViewFlipper>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

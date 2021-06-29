@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="13sp" android:textColor="#aa000000" android:id="@+id/tv_path" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Stream will archived"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll_name" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:textColor="#aa000000" android:textColorHint="#55000000" android:id="@+id/et_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Name" android:singleLine="true" android:selectAllOnFocus="true" android:imeOptions="actionUnspecified|actionGo|flagNoExtractUi"/>
+        </LinearLayout>
+        <CheckBox android:textColor="#aa000000" android:id="@+id/cb_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:checked="true" android:text="Create a memorable name for recording file"/>
+    </LinearLayout>
+</ScrollView>

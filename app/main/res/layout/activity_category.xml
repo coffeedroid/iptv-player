@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="#ff292930" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_container" android:layout_width="match_parent" android:layout_height="match_parent">
+        <android.support.p003v7.widget.CardView android:paddingTop="0dp" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="0dp">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/channels_header_bar" android:background="@drawable/bg_header_general" android:layout_width="match_parent" android:layout_height="50dp">
+                <ImageButton android:id="@+id/btn_back" android:background="@drawable/bg_transparent_dark_button" android:padding="16dp" android:layout_width="56dp" android:layout_height="56dp" android:src="@drawable/ic_back" android:onClick="onClick"/>
+                <TextView android:textSize="20sp" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Notifications" android:layout_weight="1"/>
+                <ImageView android:id="@+id/login_btn_right_menu" android:background="@drawable/bg_transparent_dark_button" android:padding="16dp" android:visibility="invisible" android:layout_width="56dp" android:layout_height="56dp"/>
+            </LinearLayout>
+        </android.support.p003v7.widget.CardView>
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll_header" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:id="@+id/tv_news" android:tag="0" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="News" android:drawableLeft="@drawable/icon_news" android:drawableRight="@drawable/ico_arrow" style="@style/text_category"/>
+            <View style="@style/divider_category"/>
+            <TextView android:id="@+id/tv_promotion" android:tag="2" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Promotions" android:drawableLeft="@drawable/icon_gift" android:drawableRight="@drawable/ico_arrow" style="@style/text_category"/>
+            <View style="@style/divider_category"/>
+            <TextView android:id="@+id/tv_update" android:tag="1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Update" android:drawableLeft="@drawable/icon_update" android:drawableRight="@drawable/ico_arrow" style="@style/text_category"/>
+            <View style="@style/divider_category"/>
+            <TextView android:id="@+id/tv_more_app" android:tag="3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="More Apps" android:drawableLeft="@drawable/icon_more_apps" android:drawableRight="@drawable/ico_arrow" style="@style/text_category"/>
+            <TextView android:textSize="14sp" android:textColor="#ffffffff" android:gravity="center_vertical" android:background="#44000000" android:padding="10dp" android:layout_width="match_parent" android:layout_height="40dp" android:text="Recents"/>
+        </LinearLayout>
+        <ListView android:id="@+id/lv_notification" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="#00000000"/>
+    </LinearLayout>
+</LinearLayout>

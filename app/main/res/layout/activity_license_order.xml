@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/root" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/iv_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_container" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/header_height">
+            <ImageView android:background="@drawable/selector_dark" android:padding="8dp" android:src="@drawable/btn_back" android:onClick="onClose" style="@style/header_icon_left"/>
+            <TextView android:text="Devices" style="@style/header_text"/>
+        </RelativeLayout>
+        <ListView android:id="@+id/lv_devices" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="#22ffffff" android:dividerHeight="1dp"/>
+    </LinearLayout>
+</RelativeLayout>

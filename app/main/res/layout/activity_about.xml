@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/root" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/iv_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_container" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/header_height">
+            <ImageView android:background="@drawable/selector_dark" android:padding="8dp" android:src="@drawable/btn_back" style="@style/header_icon_left"/>
+            <TextView android:text="About" style="@style/header_text"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <TextView android:textColor="@color/white" android:id="@+id/tv_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Version: 5.22/122" android:layout_centerInParent="true"/>
+            <TextView android:textSize="28sp" android:textColor="@color/white" android:id="@+id/tv_app_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_name" android:layout_above="@+id/tv_version" android:layout_centerHorizontal="true"/>
+            <ImageView android:id="@+id/iv_launcher" android:layout_width="70dp" android:layout_height="70dp" android:layout_marginBottom="10dp" android:src="@mipmap/ic_launcher" android:layout_above="@+id/tv_app_name" android:layout_centerHorizontal="true"/>
+            <TextView android:textColor="@color/white" android:id="@+id/tv_udid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="UDID: 845732456642059525" android:layout_below="@+id/tv_version" android:layout_centerHorizontal="true" android:textIsSelectable="true"/>
+            <TextView android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_firebase_token" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp" android:text="UDID: 845732456642059525" android:layout_below="@+id/tv_udid" android:layout_centerHorizontal="true" android:textIsSelectable="true"/>
+            <TextView android:autoLink="web" android:id="@+id/web" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/mdcstore" android:layout_below="@+id/tv_firebase_token" android:layout_centerHorizontal="true"/>
+            <TextView android:textColor="#aaffffff" android:autoLink="web" android:id="@+id/tv_activated_devices" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Activated Devices" android:layout_below="@+id/web" android:layout_centerHorizontal="true"/>
+            <TextView android:textColor="#aaffffff" android:gravity="center" android:id="@+id/tv_unlocked_features" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Unlocked Features" android:layout_below="@+id/tv_activated_devices" android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+        <TextView android:textColor="#ffc1c1c1" android:gravity="center" android:autoLink="web" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:text="@string/mdc_copyright" android:layout_centerHorizontal="true"/>
+    </LinearLayout>
+</RelativeLayout>
